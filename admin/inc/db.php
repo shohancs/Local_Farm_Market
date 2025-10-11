@@ -1,5 +1,5 @@
 <?php  
-	$db = mysqli_connect("localhost", "root", "", "agro_farm");
+	$db = mysqli_connect("localhost", "root", "", "farm_market");
 
 	if ($db) {
 		// echo "Database Connected Successfully";
