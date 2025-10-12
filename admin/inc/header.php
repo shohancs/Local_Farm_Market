@@ -11,8 +11,6 @@
 <!doctype html>
 <html lang="en" class="semi-dark">
 
-
-<!-- Mirrored from codervent.com/rukada/demo/vertical/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jan 2023 17:26:15 GMT -->
 <head>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
