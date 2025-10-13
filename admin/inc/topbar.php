@@ -39,21 +39,21 @@
 						<a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							<?php  
 								$usersReadsql = "SELECT * FROM users WHERE role=1 AND status=1 ORDER BY user_name ASC";
-										$usersRead = mysqli_query($db, $usersReadsql);
+								$usersRead = mysqli_query($db, $usersReadsql);
+								
+									while ($row = mysqli_fetch_assoc($usersRead)) {
+										$user_id 		= $row['user_id'];
+							  			$user_name 		= $row['user_name'];
+							  			$user_email 	= $row['user_email'];
+							  			$user_phone 	= $row['user_phone'];
+							  			$user_address 	= $row['user_address'];
+							  			$role 			= $row['role'];
+							  			$status 		= $row['status'];
+							  			$user_image 	= $row['user_image'];
+							  			$join_date 		= $row['join_date'];
 										
-											while ($row = mysqli_fetch_assoc($usersRead)) {
-												$user_id 		= $row['user_id'];
-									  			$user_name 		= $row['user_name'];
-									  			$user_email 	= $row['user_email'];
-									  			$user_phone 	= $row['user_phone'];
-									  			$user_address 	= $row['user_address'];
-									  			$role 			= $row['role'];
-									  			$status 		= $row['status'];
-									  			$user_image 	= $row['user_image'];
-									  			$join_date 		= $row['join_date'];
-												
-												echo '<img src="assets/images/users/' . $user_image . '" style="width: 40px;">';
-											}
+										echo '<img src="assets/images/users/' . $user_image . '" style="width: 40px;">';
+									}
 							?>
 							<div class="user-info ps-3">
 								<?php  
