@@ -185,14 +185,14 @@
 									<ol class="breadcrumb mb-0 p-0">
 										<li class="breadcrumb-item"><a href="dashboard.php"><i class="bx bx-home-alt"></i></a>
 										</li>
-										<li class="breadcrumb-item active" aria-current="page">>Add New Post</li>
+										<li class="breadcrumb-item active" aria-current="page">Add New Post</li>
 									</ol>
 								</nav>
 							</div>					
 						</div>
 						<!-- Top Icon -->
 
-						<h6 class="mb-3 text-uppercase">>Add New Post</h6><hr>
+						<h6 class="mb-3 text-uppercase">Add New Post</h6><hr>
 
 						<!-- ########## START: MAIN BODY ########## -->
 						<div class="card">
