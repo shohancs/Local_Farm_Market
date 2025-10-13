@@ -9,9 +9,6 @@
 ?>
 <!doctype html>
 <html lang="en">
-
-
-<!-- Mirrored from codervent.com/rukada/demo/vertical/authentication-signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jan 2023 17:33:39 GMT -->
 <head>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
@@ -31,7 +28,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&amp;display=swap" rel="stylesheet">
 	<link href="assets/css/app.css" rel="stylesheet">
 	<link href="assets/css/icons.css" rel="stylesheet">
-	<title>Rukada - Responsive Bootstrap 5 Admin Template</title>
+	<title>Super Admin | Login</title>
 </head>
 
 <body class="bg-login">
@@ -58,13 +55,13 @@
 										<form action="" method="POST" class="row g-4">
 											<div class="col-12">
 												<label for="inputEmailAddress" class="form-label">Email Address</label>
-												<input type="email" name="email" class="form-control" id="inputEmailAddress" placeholder="Email Address" required autocomplete="off">
+												<input type="email" name="email" class="form-control" id="inputEmailAddress" placeholder="Email Address" required autocomplete="off" value="admin@gmail.com">
 											</div>
 
 											<div class="col-12">
 												<label for="inputChoosePassword" class="form-label">Enter Password</label>
 												<div class="input-group" id="show_hide_password">
-													<input type="password" name="password" class="form-control border-end-0" id="inputChoosePassword" placeholder="Enter Password" required autocomplete="off"> 
+													<input type="password" name="password" class="form-control border-end-0" id="inputChoosePassword" placeholder="Enter Password" required autocomplete="off" value="12345"> 
 													<a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
 												</div>
 											</div>
