@@ -76,9 +76,12 @@
 	<body class="loading-overlay-showing" data-plugin-page-transition data-loading-overlay data-plugin-options="{'hideDelay': 500}">
 
 		<div class="body">
-			<!-- START: LEFT MENU -->
-			<?php include "inc/sellerLeftMenu.php" ?>
-			<!-- END: LEFT MENU -->
+			<div>
+				<!-- START: LEFT MENU -->
+				<?php include "inc/sellerLeftMenu.php" ?>
+				<!-- END: LEFT MENU -->
+			</div>
+			
 			
 			<div role="main" class="main">
 				<h1 class="text-center py-5 font-weight-bold" style="letter-spacing: 1px;">SELLER DASHBOARD</h1>

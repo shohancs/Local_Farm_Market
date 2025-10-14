@@ -69,7 +69,7 @@
 													<ul class="nav nav-pills" id="mainNav">
 														<li>
 															<a class="dropdown-item dropdown-toggle active" href="index.php" style="font-size: 16px;">
-																Home
+																Homepage
 															</a>
 														</li>
 														<li class="dropdown">
