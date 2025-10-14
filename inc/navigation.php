@@ -74,10 +74,10 @@
 										<?php }
 										else { ?>
 											<li class="">
-						<a class="dropdown-item dropdown-toggle" href="seller.php">
-							Seller Account
-						</a>
-					</li>
+												<a class="dropdown-item dropdown-toggle" href="seller.php">
+													Seller Account
+												</a>
+											</li>
 										<?php }																	?>
 								<?php
 							}
