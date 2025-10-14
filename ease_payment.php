@@ -14,14 +14,14 @@
 
 	/* PHP */
 	$post_data = array();
-	$post_data['store_id'] = "shoha6574c17446d26";
-	$post_data['store_passwd'] = "shoha6574c17446d26@ssl";
+	$post_data['store_id'] = "shoha67631ea4e1170";
+	$post_data['store_passwd'] = "shoha67631ea4e1170@ssl";
 	$post_data['total_amount'] = $amount;
 	$post_data['currency'] = "BDT";
 	$post_data['tran_id'] = "SSLCZ_TEST_".uniqid();	
-	$post_data['success_url'] = "http://localhost/project/PHP/success.php";
-	$post_data['fail_url'] = "http://localhost/project/PHP/fail.php";
-	$post_data['cancel_url'] = "http://localhost/project/PHP/cancel.php";
+	$post_data['success_url'] = "http://localhost/project/Local_Farm_Market/success.php";
+	$post_data['fail_url'] = "http://localhost/project/Local_Farm_Market/fail.php";
+	$post_data['cancel_url'] = "http://localhost/project/Local_Farm_Market/cancel.php";
 	# $post_data['multi_card_name'] = "mastercard,visacard,amexcard";  # DISABLE TO DISPLAY ALL AVAILABLE
 
 	# EMI INFO

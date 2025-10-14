@@ -59,8 +59,7 @@
 						  			$total_age 	= $row['total_age'];
 						  			$descrive 	= $row['descrive'];
 						  			?>
-						  			<h1 class="welcome" style="">HAVE MORE THAN<br><span style=""><?php echo $total_age; ?></span> </h1>
-						  			<p class="text-dark font-weight-normal appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300" style="font-size: 16px; margin: 0;"><?php echo $descrive; ?></a></p>
+						  			<p class="text-dark font-weight-normal appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300" style="font-size: 16px; margin: 0; text-align: justify;"><?php echo $descrive; ?></a></p>
 						  			<?php	
 						  		}
 						?>
@@ -104,66 +103,6 @@
 			</div>
 		</section>
 		<!-- END: ABOUT PART -->
-
-		<!-- START: SERVICE PART -->
-		<section class="service-part pb-3">
-			<div class="container py-3">		
-			 	<div class="row text-center pt-3">
-					<div class="col-md-10 mx-md-auto pb-5">
-						<h1 class="word-rotator slide mb-3 appear-animation service" data-appear-animation="fadeInUpShorter">
-							<span>What we provide </span>
-							<span class="word-rotator-words">
-								<b class="is-visible">Pure Meat</b>
-								<b>Fresh Milk</b>
-								<b>Dairy Product</b>
-								<b>The Whole Cow Deal</b>
-							</span>
-						</h1>
-					</div>
-
-					<div class="col-md-12 py-3">
-						<div class="row">
-						<?php  
-					  		$catSql = "SELECT * FROM category WHERE is_parent=1 AND status=1";
-					  		$catQuery = mysqli_query( $db, $catSql );
-						  		while ($row = mysqli_fetch_assoc($catQuery)) {
-						  			$cat_id  		= $row['cat_id'];
-						  			$cat_name 		= $row['cat_name'];
-						  			$cat_desc 		= $row['cat_desc'];
-						  			$is_parent 		= $row['is_parent'];
-						  			$status 		= $row['status'];
-						  			$join_date 		= $row['join_date'];
-						  			$cat_image 		= $row['cat_image'];	
-						  			?>
-									
-										<div class="col-md-3">
-											<div class="card-part">
-												<div class="image-container">
-													<a href="details.php?do=Manage&did=<?php echo $cat_id; ?>">
-												<?php  
-													if (!empty($cat_image)) {
-														echo '<img src="admin/assets/images/category/' . $cat_image . '" class="rotate-zoom-image">';
-													}
-												?></a>
-												</div>
-												<h1 class="cat_head"><a href="details.php?do=Manage&did=<?php echo $cat_id; ?>"><?php echo $cat_name; ?></a></h1>
-												<p class="text-dark font-weight-normal appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300" style="font-size: 16px; margin: 0;"><a href="details.php?did=<?php echo $cat_id; ?>" style="font-size: 16px; text-decoration: none; color: #000"><?php echo $cat_desc; ?></a></p>
-												
-											</div>
-										</div>
-										
-								<?php }
-
-						?>
-						</div>
-					</div>
-				</div>
-			</div>
-				  		
-			
-		</section>
-
-		<!-- END: SERVICE PART -->
 
 		<!-- START: HISTORY PART -->
 		<section class="py-5">
