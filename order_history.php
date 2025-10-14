@@ -172,11 +172,25 @@
 							  </tbody>
 							</table>
 
-							    <h3>Total Price: <?php echo $totalPrice; ?> Taka</h3>
-							    <form action="ease_payment.php" method="GET">
-							    	<input type="hidden" value="<?php echo $totalPrice; ?>" name="payment">
-							    	<input type="submit"  class="btn btn-success btn-modern text-uppercase" value="Proceed to Checkout" >
-							    </form>
+							<?php 
+
+								$markCount = mysqli_num_rows($orderQuery);
+								if ( $markCount == 0 ) {
+									echo "";
+								}
+								else { ?>
+
+									<h3>Total Price: <?php echo $totalPrice; ?> Taka</h3>
+								    <form action="ease_payment.php" method="GET">
+								    	<input type="hidden" value="<?php echo $totalPrice; ?>" name="payment">
+								    	<input type="submit"  class="btn btn-success btn-modern text-uppercase" value="Proceed to Checkout" >
+								    </form>
+
+								<?php }
+
+							?>
+
+							    
 
 
 						</div>
@@ -234,7 +248,7 @@
           					<div>
                   				<h4>Or Call Us Now</h4>
 				  				<?php  
-				  					$userSql = "SELECT * FROM users WHERE role=1 AND status=1 ORDER BY user_name ASC";
+				  					$userSql = "SELECT * FROM users WHERE role=1 AND status=1 ORDER BY user_id ASC LIMIT 1";
 							  		$userQuery = mysqli_query( $db, $userSql );
 
 							  		while ($row = mysqli_fetch_assoc($userQuery)) {

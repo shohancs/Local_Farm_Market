@@ -38,33 +38,42 @@
                   <label for="exampleInputEmail1" class="form-label">Email address</label>
                 </div>
                 <div class="input-group form-group">
-                  <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="enter your email..." aria-label="emailHelp" aria-describedby="basic-addon2" required autocomplete="off">
+                  <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="enter your email..." aria-label="emailHelp" aria-describedby="basic-addon2" required autocomplete="off" value="user@gmail.com">
                   <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-envelope"></i></span>
                 </div>
             
 
                 <div class="mb-0">
-                  <label for="exampleInputPassword1" class="form-label">Password</label>
-                </div>
-                <div class="input-group form-group">
-                  <input type="password" name="password" class="form-control" id="myInput" placeholder="enter your password..." required autocomplete="off">
-                  <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-lock"></i></span>
-                </div>
+								  <label for="exampleInputPassword1" class="form-label">Password</label>
+								</div>
 
-                <div class="form-group form-check">
-								    <input type="checkbox" class="form-check-input" id="exampleCheck1" onclick="myFunction()">
-								    <label class="form-check-label" for="exampleCheck1">Show Password</label>
-								    <script>
-				                    function myFunction() {
-				                      var x = document.getElementById("myInput");
-				                      if (x.type === "password") {
-				                        x.type = "text";
-				                      } else {
-				                        x.type = "password";
-				                      }
-				                    }
-				                  </script>
-								 </div>
+								<div class="input-group form-group">
+								  <input type="password" name="password" class="form-control" id="myInput" placeholder="enter your password..." required autocomplete="off" value="12345">
+								  <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-lock"></i></span>
+								</div>
+
+								<div class="form-group form-check">
+								  <input type="checkbox" class="form-check-input" id="exampleCheck1" onclick="myFunction()" checked>
+								  <label class="form-check-label" for="exampleCheck1">Show Password</label>
+								</div>
+
+								<script>
+								function myFunction() {
+								  var x = document.getElementById("myInput");
+								  if (x.type === "password") {
+								    x.type = "text";
+								  } else {
+								    x.type = "password";
+								  }
+								}
+
+								// ✅ পেজ লোড হলে চেকবক্স টিক দেয়া ও পাসওয়ার্ড visible করে দেবে
+								window.onload = function() {
+								  document.getElementById("exampleCheck1").checked = true;
+								  document.getElementById("myInput").type = "text";
+								};
+								</script>
+
 
                 <div class="form-group">      
                 <button type="submit" name="login_btn" class="btn btn-primary btn-lg btn-block">Log in</button>
