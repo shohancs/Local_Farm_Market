@@ -1,5 +1,5 @@
 <footer class="page-footer">
-			<p class="mb-0">Copyright © 2024. All right reserved.</p>
+			<p class="mb-0">Copyright © 2025. All right reserved.</p>
 		</footer>
 	</div>
 	<!--end wrapper-->
@@ -47,7 +47,4 @@
 		ob_end_flush();
 	?>
 </body>
-
-
-<!-- Mirrored from codervent.com/rukada/demo/vertical/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jan 2023 17:26:48 GMT -->
 </html>

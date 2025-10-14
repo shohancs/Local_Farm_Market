@@ -11,7 +11,7 @@
 											<li class="nav-item nav-item-left-border nav-item-left-border-remove nav-item-left-border-md-show">
 												<span class="ws-nowrap"><i class="fas fa-phone"></i>
 													<?php  
-									  					$userSql = "SELECT * FROM users WHERE role=1 AND status=1 ORDER BY user_name ASC";
+									  					$userSql = "SELECT * FROM users WHERE role=1 AND status=1 ORDER BY user_id ASC LIMIT 1";
 												  		$userQuery = mysqli_query( $db, $userSql );
 
 												  		while ($row = mysqli_fetch_assoc($userQuery)) {

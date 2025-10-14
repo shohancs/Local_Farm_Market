@@ -15,18 +15,20 @@
 									<li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i><p class="m-0">234 Street Name, City Name</p></li>
 									<li class="mb-1"><i class="fab fa-whatsapp text-color-primary"></i><p class="m-0"><a href="tel:8001234567">
 										<?php  
-						  					$userSql = "SELECT * FROM users WHERE role=1 AND status=1 ORDER BY user_name ASC";
+						  					$userSql = "SELECT * FROM users WHERE role=1 AND status=1 ORDER BY user_id ASC LIMIT 1";
 									  		$userQuery = mysqli_query( $db, $userSql );
 
 									  		while ($row = mysqli_fetch_assoc($userQuery)) {
 									  			$user_phone 	= $row['user_phone'];
+									  			$user_email 	= $row['user_email'];
 									  			?><a href="tel:+<?php echo $user_phone; ?>" style="text-decoration:none;"><?php echo $user_phone; ?></a>
+									  			</a></p></li>
+													<li class="mb-1"><i class="far fa-envelope text-color-primary"></i><p class="m-0"><a href="mailto:<?php echo $user_email; ?>"><?php echo $user_email; ?></a></p></li>
 					                  					
 									  			<?php
 											}
 					                	?>
-									</a></p></li>
-									<li class="mb-1"><i class="far fa-envelope text-color-primary"></i><p class="m-0"><a href="mailto:farm@gmail.com">farm@gmail.com</a></p></li>
+									
 								</ul>
 							</div>
 						</div>
@@ -36,13 +38,13 @@
 							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7301.832453840114!2d90.3753388!3d23.785997300000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1692371491851!5m2!1sen!2sbd" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 						</div>
 
-					</div>
-					<p class="text-center" style="    margin: 0px auto;
-    color: #000;
-    padding: 8px 0px 15px;
-    font-size: 15px;
-    font-weight: 500;">© Copyright 2024. All Rights Reserved.</p>
+					</div>				
+					
 				</div>
+				<div class="d-flex justify-content-between">
+						<p class="text-center" style="margin: 0px auto; color: #000; padding: 8px 0px 15px; font-size: 15px; font-weight: 500;">© Copyright 2025. All Rights Reserved.</p>
+						<p class="text-center" style="margin: 0px auto; color: #000; padding: 8px 0px 15px; font-size: 15px; font-weight: 500;">Developed by <a style="color: #0d6efd;" href="https://shohancs.com/" target="_blank">shohancs.com</a></p>
+					</div>
 			</footer>
 		</div>
 
