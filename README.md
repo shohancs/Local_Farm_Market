@@ -115,7 +115,7 @@ $base_url = 'https://shohancs.com/projects/Local_Farm_Market/';
 
 ---
 
-## Project Structure (suggested)
+## Project Structure 
 
 ```
 / (root)
