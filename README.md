@@ -168,4 +168,4 @@ Contributions are welcome. Please open issues or pull requests on the GitHub rep
 
 ---
 
-*Thank you for checking out Local Farm Market — built and maintained by Shohanur Rahman (shohancs.com).*
+*Thank you for checking out Local Farm Market — built and maintained by Shohanur Rahman Shohan (shohancs.com).*
