@@ -39,7 +39,7 @@
 				<div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
 					<div class="col mx-auto">
 					
-						<div class="card shadow-none">
+						<div class="card shadow-none" style="width: 50% !important; margin: 0px auto; ">
 							<div class="card-body">
 								<div class="border p-4 rounded">
 									<div class="text-center mb-4">
