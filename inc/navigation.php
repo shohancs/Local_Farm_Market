@@ -67,7 +67,7 @@
 									<?php  
 										if ($_SESSION['user_id'] && $role == 3) { ?>
 											<li class="">
-												<a class="dropdown-item dropdown-toggle" href="sellerDashboard.php">
+												<a class="dropdown-item dropdown-toggle" href="sellerDashboard.php?do=Home">
 													Seller Dashboard
 												</a>
 											</li>

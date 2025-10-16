@@ -126,118 +126,118 @@
 											</form>
 
 											<?php  
-					if (isset($_POST['updateUser'])) {
-					$updateUserId 	= mysqli_real_escape_string($db, $_POST['updateUserId']);
-					$fname 			= mysqli_real_escape_string($db, $_POST['fname']);
-					$password 		= mysqli_real_escape_string($db, $_POST['password']);
-					$re_password 	= mysqli_real_escape_string($db, $_POST['re_password']);
-					$phone 			= mysqli_real_escape_string($db, $_POST['phone']);
-					$address 		= mysqli_real_escape_string($db, $_POST['address']);
-					$role 			= mysqli_real_escape_string($db, $_POST['role']);
-					$status 		= mysqli_real_escape_string($db, $_POST['status']);
-					
-					$image 			= mysqli_real_escape_string($db,$_FILES['image']['name']);
-					$temp_img 		= $_FILES['image']['tmp_name'];
+												if (isset($_POST['updateUser'])) {
+												$updateUserId 	= mysqli_real_escape_string($db, $_POST['updateUserId']);
+												$fname 			= mysqli_real_escape_string($db, $_POST['fname']);
+												$password 		= mysqli_real_escape_string($db, $_POST['password']);
+												$re_password 	= mysqli_real_escape_string($db, $_POST['re_password']);
+												$phone 			= mysqli_real_escape_string($db, $_POST['phone']);
+												$address 		= mysqli_real_escape_string($db, $_POST['address']);
+												$role 			= mysqli_real_escape_string($db, $_POST['role']);
+												$status 		= mysqli_real_escape_string($db, $_POST['status']);
+												
+												$image 			= mysqli_real_escape_string($db,$_FILES['image']['name']);
+												$temp_img 		= $_FILES['image']['tmp_name'];
 
-					// Only Password & Only Image Chnage
-					if (!empty($password) && !empty($image)) {
-						if ($password == $re_password) {
-							$hassedPass = sha1($password);
+												// Only Password & Only Image Chnage
+												if (!empty($password) && !empty($image)) {
+													if ($password == $re_password) {
+														$hassedPass = sha1($password);
 
-							// Delete Old Image From  Folder
-							$oldImgSql = "SELECT * FROM users WHERE user_id='$updateUserId'";
-							$oldImageQuery = mysqli_query($db, $oldImgSql);
+														// Delete Old Image From  Folder
+														$oldImgSql = "SELECT * FROM users WHERE user_id='$updateUserId'";
+														$oldImageQuery = mysqli_query($db, $oldImgSql);
 
-							while ( $row = mysqli_fetch_assoc($oldImageQuery) ) {
-								$oldImage 	= $row['user_image'];
-								unlink("admin/assets/images/users/$img" . $oldImage);
+														while ( $row = mysqli_fetch_assoc($oldImageQuery) ) {
+															$oldImage 	= $row['user_image'];
+															unlink("admin/assets/images/users/$img" . $oldImage);
+														}
+
+														$img = rand(0, 999999) . "_" . $image;
+														move_uploaded_file($temp_img, 'admin/assets/images/users/' . $img);
+
+														$updateUserSql = "UPDATE users SET user_name='$fname', user_password='$hassedPass', user_phone='$phone', user_address='$address', role='$role', status='$status', user_image='$img' WHERE user_id='$updateUserId'";
+														$upateUserQuery = mysqli_query($db, $updateUserSql);
+
+														if ($upateUserQuery) {
+															header("Location: index.php");
+														}
+														else {
+															die ("Mysql Error." .mysqli_error($db) );
+														}
+													}
+													else { ?>
+														<div class="alert alert-warning text-center" role="alert">
+														  Sorry! please password and repassword use same input.
+														</div>
+													<?php }
+												}
+
+												// Not Password & Only Image Chnage
+												else if (empty($password) && !empty($image)) {
+
+													// Delete Old Image From  Folder
+														$oldImgSql = "SELECT * FROM users WHERE user_id='$updateUserId'";
+														$oldImageQuery = mysqli_query($db, $oldImgSql);
+
+														while ( $row = mysqli_fetch_assoc($oldImageQuery) ) {
+															$oldImage 	= $row['user_image'];
+															unlink("admin/assets/images/users/$img" . $oldImage);
+														}
+
+													$img = rand(0, 999999) . "_" . $image;
+													move_uploaded_file($temp_img, 'admin/assets/images/users/' . $img);
+
+													$updateUserSql = "UPDATE users SET user_name='$fname', user_phone='$phone', user_address='$address', role='$role', status='$status', user_image='$img' WHERE user_id='$updateUserId'";
+													$upateUserQuery = mysqli_query($db, $updateUserSql);
+
+													if ($upateUserQuery) {
+														header("Location: index.php");
+													}
+													else {
+														die ("Mysql Error." .mysqli_error($db) );
+													}
+
+												}
+
+												// Only Password & Not Image Chnage
+												else if (!empty($password) && empty($image)) {
+													if ($password == $re_password) {
+														$hassedPass = sha1($password);
+
+														$updateUserSql = "UPDATE users SET user_name='$fname', user_password='$hassedPass', user_phone='$phone', user_address='$address', role='$role', status='$status' WHERE user_id='$updateUserId'";
+														$upateUserQuery = mysqli_query($db, $updateUserSql);
+
+														if ($upateUserQuery) {
+															header("Location: index.php");
+														}
+														else {
+															die ("Mysql Error." .mysqli_error($db) );
+														}
+													}
+													else { ?>
+														<div class="alert alert-warning text-center" role="alert">
+														  Sorry! please password and repassword use same input.
+														</div>
+													<?php }
+												}
+
+												// Not Password & Not Image Chnage
+												else if (empty($password) && empty($image)) {
+
+													$updateUserSql = "UPDATE users SET user_name='$fname', user_phone='$phone', user_address='$address', role='$role', status='$status' WHERE user_id='$updateUserId'";
+													$upateUserQuery = mysqli_query($db, $updateUserSql);
+
+													if ($upateUserQuery) {
+														header("Location: index.php");
+													}
+													else {
+														die ("Mysql Error." .mysqli_error($db) );
+													}
+
+												}
+
 							}
-
-							$img = rand(0, 999999) . "_" . $image;
-							move_uploaded_file($temp_img, 'admin/assets/images/users/' . $img);
-
-							$updateUserSql = "UPDATE users SET user_name='$fname', user_password='$hassedPass', user_phone='$phone', user_address='$address', role='$role', status='$status', user_image='$img' WHERE user_id='$updateUserId'";
-							$upateUserQuery = mysqli_query($db, $updateUserSql);
-
-							if ($upateUserQuery) {
-								header("Location: index.php");
-							}
-							else {
-								die ("Mysql Error." .mysqli_error($db) );
-							}
-						}
-						else { ?>
-							<div class="alert alert-warning text-center" role="alert">
-							  Sorry! please password and repassword use same input.
-							</div>
-						<?php }
-					}
-
-					// Not Password & Only Image Chnage
-					else if (empty($password) && !empty($image)) {
-
-						// Delete Old Image From  Folder
-							$oldImgSql = "SELECT * FROM users WHERE user_id='$updateUserId'";
-							$oldImageQuery = mysqli_query($db, $oldImgSql);
-
-							while ( $row = mysqli_fetch_assoc($oldImageQuery) ) {
-								$oldImage 	= $row['user_image'];
-								unlink("admin/assets/images/users/$img" . $oldImage);
-							}
-
-						$img = rand(0, 999999) . "_" . $image;
-						move_uploaded_file($temp_img, 'admin/assets/images/users/' . $img);
-
-						$updateUserSql = "UPDATE users SET user_name='$fname', user_phone='$phone', user_address='$address', role='$role', status='$status', user_image='$img' WHERE user_id='$updateUserId'";
-						$upateUserQuery = mysqli_query($db, $updateUserSql);
-
-						if ($upateUserQuery) {
-							header("Location: index.php");
-						}
-						else {
-							die ("Mysql Error." .mysqli_error($db) );
-						}
-
-					}
-
-					// Only Password & Not Image Chnage
-					else if (!empty($password) && empty($image)) {
-						if ($password == $re_password) {
-							$hassedPass = sha1($password);
-
-							$updateUserSql = "UPDATE users SET user_name='$fname', user_password='$hassedPass', user_phone='$phone', user_address='$address', role='$role', status='$status' WHERE user_id='$updateUserId'";
-							$upateUserQuery = mysqli_query($db, $updateUserSql);
-
-							if ($upateUserQuery) {
-								header("Location: index.php");
-							}
-							else {
-								die ("Mysql Error." .mysqli_error($db) );
-							}
-						}
-						else { ?>
-							<div class="alert alert-warning text-center" role="alert">
-							  Sorry! please password and repassword use same input.
-							</div>
-						<?php }
-					}
-
-					// Not Password & Not Image Chnage
-					else if (empty($password) && empty($image)) {
-
-						$updateUserSql = "UPDATE users SET user_name='$fname', user_phone='$phone', user_address='$address', role='$role', status='$status' WHERE user_id='$updateUserId'";
-						$upateUserQuery = mysqli_query($db, $updateUserSql);
-
-						if ($upateUserQuery) {
-							header("Location: index.php");
-						}
-						else {
-							die ("Mysql Error." .mysqli_error($db) );
-						}
-
-					}
-
-}
 											?>
 
 											

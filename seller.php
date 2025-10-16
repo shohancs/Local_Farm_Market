@@ -89,11 +89,11 @@
 
 
 											if ($_SESSION['email'] != $userEmail || $password == $hassedPass ) {
-												header("Location: index.php");
+												header("Location: sellerDashboard.php?do=Home");
 											}
 											else {
 												session_destroy();
-												header("Location: index.php");
+												header("Location: seller.php");
 											}
 
 											
