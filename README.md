@@ -3,7 +3,8 @@
 **Live Demo** → [https://shohancs.com/projects/Local_Farm_Market/](https://shohancs.com/projects/Local_Farm_Market/)  
 **GitHub Repository** → [github.com/shohancs/Local_Farm_Market](https://github.com/shohancs/Local_Farm_Market)
 
-![Uploading Untitled design (3).jpg…]()
+![Untitled design (3)](https://github.com/user-attachments/assets/29a0e280-93e0-447f-84a8-560db79b7cac)
+
 
 
 > A production-ready, secure, and scalable online marketplace that connects local farmers directly with customers. Built from scratch using raw PHP & MySQL – no frameworks – proving deep understanding of core web technologies.
