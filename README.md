@@ -80,55 +80,71 @@
 
 ## Project Structure (Clean & Organized)
 /
-├── assets/                  # CSS, JS, images
-├── uploads/                 # Product & seller images
-├── admin/                   # Full admin panel
-├── seller/                  # Seller dashboard
-├── includes/
-│   ├── config.php
-│   ├── db.php
-│   └── functions.php
-├── index.php                # Homepage
-├── login.php
-├── register.php
-├── cart.php
-├── checkout.php
-└── farm_market.sql          # Database dump
-text---
-
-## Quick Local Setup
-
-```bash
-1. Clone the repo
-2. Import farm_market.sql into MySQL
-3. Update config.php with your DB credentials
-4. Set SSLCommerz sandbox keys (provided in code comments)
-5. Make uploads/ and seller_photos/ writable
-6. Visit http://localhost/Local_Farm_Market/
-
-Database Overview (Key Tables)
-
-users → role-based authentication
-sellers → extended profile for farmers
-categories & products → with pending/published status
-orders + order_items → complete order lifecycle
-comments → product reviews
-blogs → content management
+├── assets/ # CSS, JS, images <br>
+├── uploads/ # Product & seller images<br>
+├── admin/ # Full admin panel<br>
+├── seller/ # Seller dashboard<br>
+├── includes/<br>
+│ ├── config.php # Core configuration<br>
+│ ├── db.php # Database connection<br>
+│ └── functions.php # Reusable helper functions<br>
+├── index.php # Homepage<br>
+├── login.php<br>
+├── register.php<br>
+├── cart.php<br>
+├── checkout.php<br>
+└── farm_market.sql # Database dump<br>
 
 
-Developer / Owner
-Shohanur Rahman Shohan
-Full-Stack PHP Developer | Available for Remote/Freelance/Full-time Roles
+---
 
-Portfolio: https://shohancs.com
-Email: shohancs.dev@gmail.com
-LinkedIn: linkedin.com/in/shohancs
-Location: Bangladesh (UTC+6) – Fluent in English
+## ⚙️ Quick Local Setup
 
-Open to opportunities in PHP, Laravel, MySQL, WordPress, and full-stack web development.
+1. **Clone the repository**
+2. **Import `farm_market.sql`** into your MySQL server
+3. Update `includes/config.php` with your database credentials
+4. Add **SSLCommerz Sandbox API keys** (instructions included in comments)
+5. Make the following folders writable:
+   - `uploads/`
+   - `seller_photos/`
+6. Run the project in browser:  
+   👉 http://localhost/Local_Farm_Market/
 
-License
-MIT License – feel free to fork, study, or use commercially.
+---
 
-Built with passion by Shohanur Rahman Shohan © 2025
-Looking forward to working together! 🚀
+## 🗄️ Database Overview (Key Tables)
+
+| Table | Purpose |
+|-------|---------|
+| **users** | Role-based authentication (admin/seller/customer) |
+| **sellers** | Farmer profile info |
+| **categories** | Product categories |
+| **products** | Full product details with pending/published status |
+| **orders** | Customer order data |
+| **order_items** | Items within each order |
+| **comments** | Product reviews & ratings |
+| **blogs** | Blog management for SEO & content |
+
+---
+
+## 👨‍💻 Developer / Owner
+
+**Shohanur Rahman Shohan**  
+Full-Stack Software Engineer  
+Available for Remote, Freelance & Full-time roles
+
+- 🌐 Portfolio: https://shohancs.com  
+- 📧 Email: **shohancs.dev@gmail.com**  
+- 🔗 LinkedIn: https://linkedin.com/in/shohancs  
+
+---
+
+## 📜 License
+
+**MIT License**  
+Feel free to fork, modify, contribute, or use commercially.
+
+---
+
+### 🚀 Built with passion by **Shohanur Rahman Shohan**  
+*Looking forward to working together!*
