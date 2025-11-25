@@ -1,175 +1,134 @@
-# Local Farm Market
+# Local Farm Market – Full-Stack E-Commerce Marketplace for Local Farmers
 
-![Untitled design](https://github.com/user-attachments/assets/e22ff68c-d729-4456-b653-833af917f672)
+**Live Demo** → [https://shohancs.com/projects/Local_Farm_Market/](https://shohancs.com/projects/Local_Farm_Market/)  
+**GitHub Repository** → [github.com/shohancs/Local_Farm_Market](https://github.com/shohancs/Local_Farm_Market)
 
+![Project Banner](https://github.com/user-attachments/assets/e22ff68c-d729-4456-b653-833af917f672)
 
-
-**Live Demo** → https://shohancs.com/projects/Local_Farm_Market/  
-**GitHub** → https://github.com/shohancs/Local_Farm_Market  
-
----
-
-## Overview
-
-Local Farm Market is a simple, secure, and user-friendly marketplace built with raw PHP and MySQL where local farmers and sellers can list dairy products, fresh meat, sweets, and whole-cow deals. Products submitted by sellers require admin verification before they are published on the frontend. Customers can browse category-wise, add items to cart, and complete purchases using SSLCommerz. Delivery is determined based on the user’s location.
+> A production-ready, secure, and scalable online marketplace that connects local farmers directly with customers. Built from scratch using raw PHP & MySQL – no frameworks – proving deep understanding of core web technologies.
 
 ---
 
-## Demo & Test Credentials
+## Why This Project Stands Out (For Recruiters & Clients)
 
-Use the following links and dummy accounts to test the application:
+- Clean, maintainable code structure with proper separation of concerns
+- Complete user role system: Customer → Seller → Admin  
+- Real payment gateway integration (SSLCommerz – supports sandbox & live)  
+- Admin approval workflow for seller products (prevents fake listings)  
+- Location-based delivery logic  
+- Secure authentication, prepared statements, password hashing, file validation  
+- Responsive UI with Bootstrap 5 + custom CSS  
+- Fully functional cart, checkout, order tracking & review system  
+- Deployed on real shared hosting (cPanel) – not just localhost  
 
-### Instant Access
-
-### Instant Demo Access (All links are clickable)
-
-| Role           | Login Link                                                                                 | Credentials                          |
-|----------------|--------------------------------------------------------------------------------------------|--------------------------------------|
-| Website / Demo | [Open Website](https://shohancs.com/projects/Local_Farm_Market/)                           | –                                    |
-| User           | [User Login](https://shohancs.com/projects/Local_Farm_Market/login.php)                   | Try: `user@gmail.com` / `12345`      |
-| Seller         | [Seller Dashboard](https://shohancs.com/projects/Local_Farm_Market/seller.php)            | Try: `seller@gmail.com` / `12345`    |
-| Super Admin    | [Admin Panel](https://shohancs.com/projects/Local_Farm_Market/admin/)                    | Try: `admin@gmail.com` / `12345`     |
-
-> **Note**: These are demo accounts. Feel free to log in and explore all features!
+**This is not a tutorial project – it's a real-world deployable application.**
 
 ---
 
-## Key Features
+## Instant Demo Access (No signup needed)
 
-* Category-based product browsing (Dairy, Pure Meat, Fresh Milk, Whole Cow Deal, etc.)
-* Add to cart & checkout with SSLCommerz payment integration
-* Location-based delivery assignment
-* Three user roles: **User**, **Seller**, **Admin**
-* Seller account registration & product submission flow with admin verification
-* Admin panel for category management, product approval, role management, and blog posts
-* Display of product owner (malik) and farmer information
-* Product comments/reviews and order tracking
-* Secure handling of payments and order lifecycle
+| Role            | Direct Link                                                                 | Credentials                  |
+|-----------------|-----------------------------------------------------------------------------|------------------------------|
+| Public Website  | [Open Site](https://shohancs.com/projects/Local_Farm_Market/)              | –                            |
+| Customer        | [Customer Login](https://shohancs.com/projects/Local_Farm_Market/login.php) | `user@gmail.com` / `12345`   |
+| Seller Dashboard| [Seller Panel](https://shohancs.com/projects/Local_Farm_Market/seller.php)  | `seller@gmail.com` / `12345` |
+| Admin Panel     | [Admin Panel](https://shohancs.com/projects/Local_Farm_Market/admin/)       | `admin@gmail.com` / `12345`  |
 
----
-
-## Roles & Flows
-
-**User**
-
-* Browse products by category
-* Add items to cart and checkout
-* Leave comments/reviews and track orders
-
-**Seller (Local Farmer)**
-
-* Register as a seller and submit product listings (meat, milk, sweets, whole-cow deals)
-* Listings remain pending until admin verification
-
-**Admin**
-
-* Review and verify seller-submitted products
-* Manage categories, users, roles, and blog posts
-* View and manage orders and payments
+> Feel free to place orders, add products (as seller), approve/reject listings (as admin) – everything works end-to-end.
 
 ---
 
-## Tech Stack
+## Core Features
 
-* **Back-end:** PHP (raw / procedural)
-* **Database:** MySQL
-* **Front-end:** HTML, CSS, Bootstrap
-* **Payment:** SSLCommerz
-* **Hosting:** cPanel / Shared hosting (deployed at `shohancs.com`)
-
----
-
-## Installation & Setup (Quick)
-
-1. Clone or download the repository to your local machine or server.
-2. Create a MySQL database and import the provided `farm_market.sql` (or create tables manually).
-3. Update the database credentials in the project configuration file (e.g., `config.php`):
-
-```php
-$db_host = 'localhost';
-$db_user = 'DB_USERNAME';
-$db_pass = 'DB_PASSWORD';
-$db_name = 'farm_market';
-$base_url = 'https://shohancs.com/projects/Local_Farm_Market/';
-```
-
-4. Configure SSLCommerz keys in the payment configuration file (`ssl_config.php` or similar). Use sandbox keys for testing.
-5. Ensure upload directories (e.g., `uploads/`, `seller_photos/`) are writable by the webserver.
-6. Visit the site URL to test the application and use the demo credentials above.
+| Feature                        | Description                                                                 |
+|--------------------------------|-----------------------------------------------------------------------------|
+| Category-wise Product Browsing | Dairy, Pure Meat, Fresh Milk, Sweets, Whole-Cow Deals, etc.                |
+| Shopping Cart & Checkout       | Session-based cart with real-time total calculation                        |
+| SSLCommerz Payment Gateway     | Sandbox + Live mode ready (BD's most popular gateway)                      |
+| Location-based Delivery        | Delivery area determined from user's address                               |
+| Seller Product Approval Flow   | All listings stay `pending` → Admin verifies authenticity → `published`   |
+| Multi-role Dashboard           | Separate panels for Customer, Seller & Super Admin                        |
+| Order Tracking & Reviews       | Customers can track orders and leave ratings/comments                      |
+| Blog Management                | Admin can create and publish articles                                      |
+| Secure File Uploads            | Only allowed image types, renamed files, size limits                       |
 
 ---
 
-## Admin Approval Flow (Seller Product)
+## Technology Stack
 
-1. Seller submits a product (status: `pending`).
-2. Admin inspects product details, owner (malik) and farmer information.
-3. If authentic, admin approves and publishes the product (status: `published`).
-4. If not authentic, admin rejects the submission and notifies the seller.
-
----
-
-## Security & Best Practices
-
-* Store passwords using `password_hash()` and verify with `password_verify()`.
-* Use prepared statements (mysqli with prepared queries or PDO) to prevent SQL injection.
-* Validate and sanitize all user inputs on both client and server sides.
-* Restrict upload file types and validate file contents.
-* Always use HTTPS in production. For local testing, use ngrok when testing payment callbacks.
-* Use SSLCommerz sandbox during development and verify callbacks before switching to live keys.
+| Layer          | Technology                                          |
+|----------------|-----------------------------------------------------|
+| Backend        | PHP 8+ (procedural, no framework)                   |
+| Database       | MySQL (optimized schema with proper relationships) |
+| Frontend       | HTML5, CSS3, Bootstrap 5, Vanilla JS                |
+| Payment        | SSLCommerz (Bangladesh) – Sandbox + Live            |
+| Security       | `password_hash()`, prepared statements, input sanitization, CSRF-ready structure |
+| Deployment     | cPanel Shared Hosting (real production environment) |
 
 ---
 
-## Project Structure 
+## Security Best Practices Implemented
 
-```
-/ (root)
-|-- assets/
-|-- uploads/
-|-- admin/
-|-- seller/
-|-- includes/
-|   |-- config.php
-|   |-- db.php
-|-- index.php
-|-- login.php
-|-- seller.php
-|-- cart.php
-|-- checkout.php
-```
+- Passwords hashed with `PASSWORD_DEFAULT`
+- All queries use prepared statements (MySQLi)
+- Input validation + sanitization (client + server side)
+- Restricted file uploads (type, size, renaming)
+- Session management with regeneration
+- HTTPS enforced in production
 
 ---
 
-## Database Schema (Main tables)
+## Project Structure (Clean & Organized)
+/
+├── assets/                  # CSS, JS, images
+├── uploads/                 # Product & seller images
+├── admin/                   # Full admin panel
+├── seller/                  # Seller dashboard
+├── includes/
+│   ├── config.php
+│   ├── db.php
+│   └── functions.php
+├── index.php                # Homepage
+├── login.php
+├── register.php
+├── cart.php
+├── checkout.php
+└── farm_market.sql          # Database dump
+text---
 
-* `users` (id, name, email, password_hash, role, address, location, created_at)
-* `categories` (id, name, slug, description)
-* `sellers` (id, user_id, shop_name, owner_name, verification_status, phone, address)
-* `products` (id, seller_id, category_id, title, description, price, quantity, status, image, created_at)
-* `orders` (id, user_id, total_amount, payment_status, delivery_address, created_at)
-* `order_items` (id, order_id, product_id, qty, price)
-* `comments` (id, product_id, user_id, comment, created_at)
-* `blogs` (id, title, body, author, created_at)
+## Quick Local Setup
 
----
+```bash
+1. Clone the repo
+2. Import farm_market.sql into MySQL
+3. Update config.php with your DB credentials
+4. Set SSLCommerz sandbox keys (provided in code comments)
+5. Make uploads/ and seller_photos/ writable
+6. Visit http://localhost/Local_Farm_Market/
 
-## Contact
+Database Overview (Key Tables)
 
-* Official website: `https://shohancs.com/`
-* Owner / Maintainer: **Shohanur Rahman Shohan**
-* Contact Email: `shohancs.dev@gmail.com`
+users → role-based authentication
+sellers → extended profile for farmers
+categories & products → with pending/published status
+orders + order_items → complete order lifecycle
+comments → product reviews
+blogs → content management
 
----
 
-## License
+Developer / Owner
+Shohanur Rahman Shohan
+Full-Stack PHP Developer | Available for Remote/Freelance/Full-time Roles
 
-MIT license.       
+Portfolio: https://shohancs.com
+Email: shohancs.dev@gmail.com
+LinkedIn: linkedin.com/in/shohancs
+Location: Bangladesh (UTC+6) – Fluent in English
 
----
+Open to opportunities in PHP, Laravel, MySQL, WordPress, and full-stack web development.
 
-## Contribution
+License
+MIT License – feel free to fork, study, or use commercially.
 
-Contributions are welcome. Please open issues or pull requests on the GitHub repository with clear descriptions and reproduction steps.
-
----
-
-*Thank you for checking out Local Farm Market — built and maintained by Shohanur Rahman Shohan (shohancs.com).*
+Built with passion by Shohanur Rahman Shohan © 2025
+Looking forward to working together! 🚀
