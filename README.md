@@ -18,19 +18,14 @@ Local Farm Market is a simple, secure, and user-friendly marketplace built with 
 
 Use the following links and dummy accounts to test the application:
 
-* Website / Demo: `https://shohancs.com/projects/Local_Farm_Market/`
-* User login: `https://shohancs.com/projects/Local_Farm_Market/login.php`
+### Instant Access
 
-  * Email: `user@gmail.com`
-  * Password: `12345`
-* Seller login: `https://shohancs.com/projects/Local_Farm_Market/seller.php`
-
-  * Email: `seller@gmail.com`
-  * Password: `12345`
-* Super Admin panel: `https://shohancs.com/projects/Local_Farm_Market/admin/`
-
-  * Email: `admin@gmail.com`
-  * Password: `12345`
+| Role           | Link                                                                                   | Credentials                     |
+|----------------|----------------------------------------------------------------------------------------|---------------------------------|
+| Website / Demo | [Click Here](https://shohancs.com/projects/Local_Farm_Market/)                         | —                               |
+| User Login     | [User Panel](https://shohancs.com/projects/Local_Farm_Market/login.php)                | `user@gmail.com` / `12345`      |
+| Seller Login   | [Seller Dashboard](https://shohancs.com/projects/Local_Farm_Market/seller.php)        | `seller@gmail.com` / `12345`    |
+| Super Admin    | [Admin Panel](https://shohancs.com/projects/Local_Farm_Market/admin/)                 | `admin@gmail.com` / `12345`     |
 
 ---
 
