@@ -58,11 +58,11 @@
 
 | Layer          | Technology                                          |
 |----------------|-----------------------------------------------------|
-| Backend        | PHP 8+ (procedural, no framework)                   |
+| Backend        | PHP 8+                |
 | Database       | MySQL (optimized schema with proper relationships) |
 | Frontend       | HTML5, CSS3, Bootstrap 5, Vanilla JS                |
 | Payment        | SSLCommerz (Bangladesh) – Sandbox + Live            |
-| Security       | `password_hash()`, prepared statements, input sanitization, CSRF-ready structure |
+| Security       | `sha1()`, prepared statements, input sanitization, CSRF-ready structure |
 | Deployment     | cPanel Shared Hosting (real production environment) |
 
 ---
