@@ -20,12 +20,16 @@ Use the following links and dummy accounts to test the application:
 
 ### Instant Access
 
-| Role           | Link                                                                                   | Credentials                     |
-|----------------|----------------------------------------------------------------------------------------|---------------------------------|
-| Website / Demo | [Click Here](https://shohancs.com/projects/Local_Farm_Market/)                         | —                               |
-| User Login     | [User Panel](https://shohancs.com/projects/Local_Farm_Market/login.php)                | `user@gmail.com` / `12345`      |
-| Seller Login   | [Seller Dashboard](https://shohancs.com/projects/Local_Farm_Market/seller.php)        | `seller@gmail.com` / `12345`    |
-| Super Admin    | [Admin Panel](https://shohancs.com/projects/Local_Farm_Market/admin/)                 | `admin@gmail.com` / `12345`     |
+### Instant Demo Access (All links are clickable)
+
+| Role           | Login Link                                                                                 | Credentials                          |
+|----------------|--------------------------------------------------------------------------------------------|--------------------------------------|
+| Website / Demo | [Open Website](https://shohancs.com/projects/Local_Farm_Market/)                           | –                                    |
+| User           | [User Login](https://shohancs.com/projects/Local_Farm_Market/login.php)                   | Try: `user@gmail.com` / `12345`      |
+| Seller         | [Seller Dashboard](https://shohancs.com/projects/Local_Farm_Market/seller.php)            | Try: `seller@gmail.com` / `12345`    |
+| Super Admin    | [Admin Panel](https://shohancs.com/projects/Local_Farm_Market/admin/)                    | Try: `admin@gmail.com` / `12345`     |
+
+> **Note**: These are demo accounts. Feel free to log in and explore all features!
 
 ---
 
