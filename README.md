@@ -4,7 +4,8 @@
 
 
 
-[Live Demo • Visit Site](https://shohancs.com/projects/Local_Farm_Market/)
+**Live Demo** → https://shohancs.com/projects/Local_Farm_Market/  
+**GitHub** → https://github.com/shohancs/Local_Farm_Market  
 
 ---
 
