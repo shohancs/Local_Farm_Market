@@ -141,12 +141,9 @@ Available for Remote, Freelance & Full-time roles
 
 ---
 
-## 📜 License
 
-**MIT License**  
-Feel free to fork, modify, contribute, or use commercially.
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg?style=flat-square)](https://opensource.org/licenses/MIT)      
 
 ---
-
-### 🚀 Built with passion by **Shohanur Rahman Shohan**  
-*Looking forward to working together!*
